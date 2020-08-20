@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main{
+
+    //설탕 배달 문제
+    //그리디 알고리즘과 유사한 문제가 아닐까..라는 생각이 들었습니다
+    public static void main(String args[]){
+        
+		Scanner sc = new Scanner(System.in);
+    int count=0;
+		int n = sc.nextInt();
+		if(n%5 == 0) count = n/5;
+		else {
+			int quot = n/5;
+			int remainder = n%5;
+			while(true) {
+				if(remainder%3==0) {
+					count = quot+(remainder/3);
+					break;
+				}else if(quot!=0 && remainder%3!=0) {
+					quot--;
+					remainder = n-5*quot;
+				}else if(quot==0 && remainder%3==0) {
+					count= n/3; break;
+				}else if(quot==0 && remainder%3!=0) {
+					count = -1; break;
+				}
+			}
+		}
+		System.out.println(count);
+        sc.close();
+    }
+}
