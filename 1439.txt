@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        //입력된 문자열의 글자(0,1)가 변하는 경계값을 카운트하는게 핵심입니다!!
+        Scanner sc = new Scanner(System.in);
+        String s = sc.next();
+		    int boundary = 0;
+        for (int i = 0; i < s.length()-1; i++) {
+          if(s.charAt(i)!=s.charAt(i+1)) boundary++;
+          }
+        if(boundary%2==0) System.out.println(boundary/2);
+        else System.out.println(boundary/2+1);
+    }
+}
