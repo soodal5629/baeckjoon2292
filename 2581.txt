@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int a = sc.nextInt();
+		int sum=0;
+		int total = 0;
+		int min = 10001;
+		loop: for (int i = n; i <= a; i++) {
+			int count=0;
+            if(i==1) continue loop;
+			for (int j = 2; j <= i/2; j++) {
+				if(i%j==0) continue loop;
+			}
+			sum+=i;
+			if(min>i) min = i;
+			total++;
+		}
+		if(total==0) System.out.println(-1);
+		else {
+			System.out.println(sum);
+			System.out.println(min);
+		}
+        sc.close();
+    }
+}
