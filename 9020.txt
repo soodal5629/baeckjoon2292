@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc= new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+          int temp= sc.nextInt()/2;
+          int min = temp,max=temp;
+        if(fun1(temp)) System.out.println(temp+" "+temp);
+        else {
+            while(true) {
+              min--;
+              max++;
+              if(fun1(min)&&fun1(max)) break;
+            }
+            System.out.println(min+" "+max);
+          }
+        }
+            sc.close();
+        }
+        private static boolean fun1(int temp) {
+        if(temp==2) return true;
+        else {
+          for (int i = 2; i <= temp/2; i++) {
+            if(temp%i==0) return false;
+          }
+          return true;
+		}
+	}
+}
