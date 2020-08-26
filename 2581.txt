@@ -9,7 +9,7 @@ public class Main{
 		int min = 10001;
 		loop: for (int i = n; i <= a; i++) {
 			int count=0;
-            if(i==1) continue loop;
+            	if(i==1) continue loop;
 			for (int j = 2; j <= i/2; j++) {
 				if(i%j==0) continue loop;
 			}
