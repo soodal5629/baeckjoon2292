@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+    
+    //수학적 개념을 이해하는 것이 핵심입니다
+    
+    Scanner sc= new Scanner(System.in);
+		int n = sc.nextInt();
+		double pi = Math.PI;
+		System.out.printf("%.6f",pi*n*n);
+        System.out.println();
+		System.out.printf("%.6f",(double)2*n*n);
+		
+        sc.close();
+    }
+}
