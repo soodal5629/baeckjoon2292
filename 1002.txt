@@ -1,6 +1,9 @@
 import java.util.*;
 public class Main{
     public static void main(String args[]){
+    
+    	// 두 점 사이의 거리구하는 수학적 개념과 공식이 중요합니다
+	
        	Scanner sc = new Scanner(System.in);
 	int t = sc.nextInt();
 		
