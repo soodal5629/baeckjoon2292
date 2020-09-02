@@ -1,7 +1,7 @@
 import java.util.*;
 public class Main{
     public static void main(String args[]){
-    // 2중 for문을 돌리지않고 단일 for문을 돌려도 되지만 저는 2중 for문을 돌렸습니다 ㅠ
+    // 2중 for문을 돌리지않고 단일 for문을 돌려도 되지만 저는 2중 for문을 돌렸습니다ㅠ
 		Scanner sc = new Scanner(System.in);
 		
 		int t = sc.nextInt();
