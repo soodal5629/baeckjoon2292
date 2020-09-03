@@ -2,6 +2,7 @@ import java.util.*;
 public class Main{
     public static void main(String args[]){
         //입력된 문자열의 글자(0,1)가 변하는 경계값을 카운트하는게 핵심입니다!!
+	
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
 		    int boundary = 0;
