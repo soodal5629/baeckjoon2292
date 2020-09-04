@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+	  
+	    String a = sc.next();
+	    int []brr =new int[8];
+	    int sum=0;
+	    for (int i = 0; i < brr.length; i++) {
+			brr[i] = i+3;
+		}
+	    for (int i = 0; i < a.length(); i++) {
+			int temp = a.charAt(i);
+			if(temp>=65 && temp<68) sum+= brr[0];
+			else if(temp>=68 && temp<71) sum+= brr[1];
+			else if(temp>=71 && temp<74) sum+= brr[2];
+			else if(temp>=74 && temp<77) sum+= brr[3];
+			else if(temp>=77 && temp<80) sum+= brr[4];
+			else if(temp>=80 && temp<84) sum+= brr[5];
+			else if(temp>=84 && temp<87) sum+= brr[6];
+			else sum+= brr[7];			
+		}
+	    System.out.println(sum);
+    }
+}
