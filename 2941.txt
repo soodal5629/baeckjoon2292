@@ -1,0 +1,48 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+      
+      //내장함수를 쓰세요 저는 일일이 다 구현해서 하드코딩이 되어버렸습니다...!!!
+      
+      Scanner sc = new Scanner(System.in);
+	  
+	    String a = sc.next();
+	    String[] arr = a.split("");
+	    String []brr = {"c=","c-","dz=","d-","lj","nj","s=","z="};
+	    int sum=0;
+	    int mono = 0;
+	    int index=0;
+	    int count=0;
+	   int now = index+2;
+	  loop: while ( index < a.length()) {
+		if(index<a.length()-2) {
+	    		loop2: for (int j = 0; j < brr.length ; j++) {
+	        		if(a.substring(index,now).equals(brr[j])) {
+		    			sum++; count++;
+			    		index = now-1;	//now = index+2;
+			    		break loop2;
+			    	}else if(a.substring(index,now+1).equals(brr[j])) {
+			    		sum++; count++;
+			    		index = now;	
+			    		break loop2;
+			    	}
+			    	
+		    	}  index++; now = index+2;
+	    			if(count==0) mono++;
+	    			else count =0;
+	    	}
+	    	else {
+	    		for (int i = 0; i < brr.length; i++) {
+	    			if(a.substring(index).equals(brr[i])) {
+		    			sum++;
+			    		break loop;
+			    	}
+		    	} //end of for
+	    		mono+=a.substring(index).length();
+	    		break loop;
+	    	} //end of else
+	   }
+	    
+	    System.out.println(sum+mono);
+    }
+}
