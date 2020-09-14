@@ -1,7 +1,7 @@
 import java.util.*;
 public class Main{
     public static void main(String args[]){
-    // 계차수열 이용
+   	 // 계차수열 이용
 	Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 		int a = 0;
